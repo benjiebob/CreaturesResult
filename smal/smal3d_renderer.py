@@ -47,6 +47,6 @@ class SMAL3DRenderer(nn.Module):
         rendered_silhouettes = rendered_silhouettes.unsqueeze(1)
 
         rendered_images = self.renderer.render(verts, faces, textures)    
-        rendered_images = torch.clamp(rendered_images, 0.0, 1.0)
+        rendered_images = torch.clamp(rendered_images[0], 0.0, 1.0)
 
         return rendered_images, rendered_silhouettes, rendered_joints
