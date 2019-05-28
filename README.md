@@ -4,7 +4,7 @@ Scripts for viewing Creatures Great and SMAL results.
 ## Installation
 1. Clone the repository with submodules and enter directory
    ```
-   git clone --recurse-submodules -j8 https://github.com/benjiebob/CreaturesResult
+   git clone --recurse-submodules https://github.com/benjiebob/CreaturesResult
    cd CreaturesResult
     
 2. Install the Neural Mesh Renderer submodule (which originated from my [fork](https://github.com/benjiebob/neural_renderer)), which includes a render_points function
