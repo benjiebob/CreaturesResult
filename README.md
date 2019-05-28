@@ -24,3 +24,14 @@ Scripts for viewing Creatures Great and SMAL results.
    ```
    python result_viewer.py
    ```
+
+### Acknowledgements
+This work was completed in relation to the following paper:
+```
+@inproceedings{biggs2018creatures,
+  title={{C}reatures great and {SMAL}: {R}ecovering the shape and motion of animals from video},
+  author={Biggs, Benjamin and Roddick, Thomas and Fitzgibbon, Andrew and Cipolla, Roberto},
+  booktitle={ACCV},
+  year={2018}
+}
+```
