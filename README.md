@@ -10,8 +10,7 @@ Scripts for viewing Creatures Great and SMAL results.
 2. Install the Neural Mesh Renderer submodule (which originated from my [fork](https://github.com/benjiebob/neural_renderer)), which includes a render_points function
 
    ```
-   cd neural_renderer
-   sudo python setup.py install
+   pip install -e neural_renderer
 
 3. Download texture map (from smal/dog_texture.pkl) and a version of SMAL 2017 converted to NumPy (smal_CVPR2017_np.pkl) from [my Google Drive](https://drive.google.com/open?id=1gPwA_tl1qrKiUkveE8PTsEOEMHtTw8br) and place under the smal folder
 
