@@ -32,11 +32,6 @@ def crop_silhouette(sil_img, target_size):
     
     return sil_resize
 
-def run_crop(img_path, crop_size):
-    sil_img = scipy.misc.imread(img_path, mode = 'RGB')[:, :, 0] / 255.0
-    sil_img_crop = crop_silhouette(sil_img, crop_size)
-    return sil_img_crop
-
 def draw_joints(image, joints, joint_info):
     image = (image * 255.0).astype(np.uint8)
     ret_image = image.copy()
@@ -56,8 +51,10 @@ def main():
     plt.figure()
 
     for frame_id, frame in enumerate(input_files):
-        sil_img = run_crop(os.path.join(IMAGE_DIR, frame), IMAGE_SIZE)
+        sil_img_orig = scipy.misc.imread(os.path.join(IMAGE_DIR, frame), mode = 'RGB')[:, :, 0] / 255.0
         pkl_file = os.path.join(RESULTS_DIR, "{0:04}.pkl".format(frame_id))
+
+        sil_img = crop_silhouette(sil_img_orig, IMAGE_SIZE)
         
         params_cuda = {}
         with open(pkl_file, 'rb') as f:
