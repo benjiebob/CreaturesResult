@@ -7,7 +7,7 @@ Scripts for viewing Creatures Great and SMAL results.
    git clone --recurse-submodules -j8 https://github.com/benjiebob/CreaturesResult
    cd CreaturesResult
     
-2. Install the Neural Mesh Renderer submodule (from my [fork](https://github.com/benjiebob/neural_renderer)), which includes a render_points function
+2. Install the Neural Mesh Renderer submodule (which originated from my [fork](https://github.com/benjiebob/neural_renderer)), which includes a render_points function
 
    ```
    cd neural_renderer
