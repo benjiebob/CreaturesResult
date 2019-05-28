@@ -1,4 +1,4 @@
-# CreaturesResult
+# Creatures Great and SMAL - Result Viewer
 Scripts for viewing Creatures Great and SMAL results.
 
 ## Installation
