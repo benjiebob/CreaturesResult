@@ -9,8 +9,9 @@ import torch
 from smal.smal3d_renderer import SMAL3DRenderer
 from smal.joint_catalog import SMALJointInfo
 
-IMAGE_DIR = "/scratch/bjb56/data/animal_data/cosker/dog_sequences/maggie"
-RESULTS_DIR = "/scratch/bjb56/experiments/cosker/maggie/24-05-prelim"
+ANIMAL_NAME = "maggie"
+IMAGE_DIR = "/scratch/bjb56/data/animal_data/cosker/dog_sequences/{0}".format(ANIMAL_NAME)
+RESULTS_DIR = "/scratch/bjb56/experiments/cosker/cosker-{0}/st10_ep0".format(ANIMAL_NAME)
 IMAGE_SIZE = 256
 
 def crop_silhouette(sil_img, target_size):
@@ -43,7 +44,7 @@ def draw_joints(image, joints, joint_info):
     return ret_image / 255.0
 
 def main():
-    model_renderer = SMAL3DRenderer(IMAGE_SIZE).cuda()
+    model_renderer = SMAL3DRenderer(IMAGE_SIZE, 20).cuda()
     joint_info = SMALJointInfo()
     input_files = sorted(os.listdir(IMAGE_DIR))
 
